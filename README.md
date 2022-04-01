@@ -1,5 +1,5 @@
 
-This is an improved Azure AD connector for SailPoint IdentityIQ that adds support for [application roles](https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles).
+This is an improved Azure AD connector for SailPoint IdentityIQ with support for [application roles](https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles).
 
 ![Improved Azure AD connector](screenshot.png)
 
