@@ -3,6 +3,12 @@ This is an improved Azure AD connector for SailPoint IdentityIQ that adds suppor
 
 ![Improved Azure AD connector](screenshot.png)
 
+## Features
+
+* Application role aggregation from all service principals
+* Application role assignment aggregation
+* Provisioning (add and remove application role assignments)
+
 ## Installation
 
 Download SailPoint IdentityIQ from [https://community.sailpoint.com](https://community.sailpoint.com) and store the zip-file in `base/ga/identityiq.zip`.
