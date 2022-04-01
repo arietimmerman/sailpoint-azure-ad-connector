@@ -21,7 +21,7 @@ Update your existing Azure AD application via the _debug interface_.
 
 Add the following entry.
 
-~~~,xml
+~~~.xml
 <entry key="connector-classpath">
     <value>
         <List>
@@ -57,6 +57,7 @@ And add the schema for the `application_role` object.
     <Description></Description>
     </AttributeDefinition>
 </Schema>
+~~~
 
 ## Support
 
