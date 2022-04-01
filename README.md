@@ -1,6 +1,8 @@
 
 This is an improved Azure AD connector for SailPoint IdentityIQ that adds support for [application roles](https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles).
 
+![Improved Azure AD connector](screenshot.png)
+
 ## Installation
 
 Download SailPoint IdentityIQ from [https://community.sailpoint.com](https://community.sailpoint.com) and store the zip-file in `base/ga/identityiq.zip`.
