@@ -1,0 +1,52 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'java-library'
+
+repositories {
+    mavenCentral()
+}
+
+sourceSets {
+    main.java.srcDirs = ['src/java']
+    main.resources.srcDirs = ['src/resources']
+}
+
+jar {
+    archiveBaseName = 'AzureADImproved'
+    archiveVersion =  '0.8.0'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    implementation fileTree(dir: 'identityiq_unzipped/war/WEB-INF/lib', include: '*.jar')
+    implementation fileTree(dir: 'identityiq_unzipped/war/WEB-INF/lib-connectors', include: '*.jar')
+}
+
+task unzip_identityiq (type: Copy) {
+    from zipTree("./base/ga/identityiq.zip")
+    into "./identityiq_unzipped"
+}
+
+task unzip_identityiq_war (type: Copy) {
+    dependsOn tasks.unzip_identityiq
+    from zipTree("./identityiq_unzipped/identityiq.war")
+    into "./identityiq_unzipped/war"
+}
+
+task plugin_prepare (type: Copy) {
+    dependsOn tasks.unzip_identityiq_war
+    from 'plugin_src'
+    into "$buildDir/toArchive"
+}
+
+task plugin_prepare_second{
+    dependsOn tasks.plugin_prepare
+    doLast {
+        copy {
+            from jar
+            into "$buildDir/toArchive/lib"
+        }
+    }
+}

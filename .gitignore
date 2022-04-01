@@ -1,0 +1,18 @@
+# Ignore Gradle project-specific cache directory
+.gradle
+base/ga/identityiq.zip
+# Ignore Gradle build output directory
+build
+libs
+identityiq_unzipped
+
+.vscode
+null
+bin
+gradle/wrapper/gradle-wrapper.jar
+gradle/wrapper/gradle-wrapper.properties
+gradlew
+gradlew.bat
+src/java/nl/a11n/sailpoint/Test.java
+src/resources/iiq.properties
+src/resources/app.xml
